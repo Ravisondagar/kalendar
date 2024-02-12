@@ -169,7 +169,7 @@ function makeNow(dateString) {
     d.setDate(today.getUTCDate() + (d.getUTCDate() - startDate));
     return d.toISOString();
 }
-const existing_events = _existing_events.map(ev => ({
+const existing_events = _existing_events.map((ev) => ({
     ...ev,
     from: makeNow(ev.from),
     to: makeNow(ev.to),
