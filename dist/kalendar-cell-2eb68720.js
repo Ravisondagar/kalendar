@@ -1,4 +1,4 @@
-import { g as getLocaleTime, c as cloneObject, b as _objectSpread2, d as __vue_normalize__, e as __vue_create_injector__ } from './index-ebc0f832.js';
+import { g as getLocaleTime, c as cloneObject, b as _objectSpread2, d as __vue_normalize__, e as __vue_create_injector__ } from './index-d525944e.js';
 import 'vue';
 
 var script = {
@@ -6,7 +6,7 @@ var script = {
   inject: ['kalendar_options'],
   components: {
     KalendarEvent: function KalendarEvent() {
-      return import('./kalendar-event-96b416ed.js');
+      return import('./kalendar-event-a520c034.js');
     }
   },
   computed: {
@@ -171,8 +171,8 @@ var __vue_render__ = function __vue_render__() {
         return _vm.mouseUp();
       }
     }
-  }, _vm._l(_vm.cell_events, function (event, eventIndex) {
-    return _vm.cell_events && _vm.cell_events.length ? _c('KalendarEvent', {
+  }, [_vm.cell_events && _vm.cell_events.length ? _vm._l(_vm.cell_events, function (event, eventIndex) {
+    return _c('KalendarEvent', {
       key: eventIndex,
       style: "z-index: 10",
       attrs: {
@@ -181,22 +181,22 @@ var __vue_render__ = function __vue_render__() {
         "index": eventIndex,
         "overlaps": _vm.overlapValue
       }
-    }) : _vm._e();
-  }), 1) : _vm._e();
+    });
+  }) : _vm._e()], 2) : _vm._e();
 };
 var __vue_staticRenderFns__ = [];
 
 /* style */
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-0aa88a06_0", {
-    source: "li[data-v-0aa88a06]{font-size:13px;position:relative}.created-events[data-v-0aa88a06]{height:100%}ul.building-blocks li[data-v-0aa88a06]{z-index:0;border-bottom:dotted 1px var(--odd-cell-border-color)}ul.building-blocks li.first_of_appointment[data-v-0aa88a06]{z-index:1;opacity:1}ul.building-blocks li.is-an-hour[data-v-0aa88a06]{border-bottom:solid 1px var(--table-cell-border-color)}ul.building-blocks li.has-events[data-v-0aa88a06]{z-index:unset}ul.building-blocks li.being-created[data-v-0aa88a06]{z-index:11}",
+  inject("data-v-0b2803e2_0", {
+    source: "li[data-v-0b2803e2]{font-size:13px;position:relative}.created-events[data-v-0b2803e2]{height:100%}ul.building-blocks li[data-v-0b2803e2]{z-index:0;border-bottom:dotted 1px var(--odd-cell-border-color)}ul.building-blocks li.first_of_appointment[data-v-0b2803e2]{z-index:1;opacity:1}ul.building-blocks li.is-an-hour[data-v-0b2803e2]{border-bottom:solid 1px var(--table-cell-border-color)}ul.building-blocks li.has-events[data-v-0b2803e2]{z-index:unset}ul.building-blocks li.being-created[data-v-0b2803e2]{z-index:11}",
     map: undefined,
     media: undefined
   });
 };
 /* scoped */
-var __vue_scope_id__ = "data-v-0aa88a06";
+var __vue_scope_id__ = "data-v-0b2803e2";
 /* module identifier */
 var __vue_module_identifier__ = undefined;
 /* functional template */
