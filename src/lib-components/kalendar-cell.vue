@@ -11,22 +11,21 @@
             'has-events': cell_events && cell_events.length > 0,
             'being-created': !!being_created || hasPopups,
         }"
-        :style="
-            `
+        :style="`
       height: ${kalendar_options.cell_height}px;
-    `
-        "
+    `"
     >
-        <KalendarEvent
-            :style="`z-index: 10`"
-            v-if="cell_events && cell_events.length"
-            v-for="(event, eventIndex) in cell_events"
-            :event="event"
-            :key="eventIndex"
-            :total="cell_events.length"
-            :index="eventIndex"
-            :overlaps="overlapValue"
-        />
+        <template v-if="cell_events && cell_events.length">
+            <KalendarEvent
+                :style="`z-index: 10`"
+                v-for="(event, eventIndex) in cell_events"
+                :event="event"
+                :key="eventIndex"
+                :total="cell_events.length"
+                :index="eventIndex"
+                :overlaps="overlapValue"
+            />
+        </template>
     </li>
 </template>
 <script>
@@ -74,7 +73,7 @@ export default {
                 return [];
             return Object.values(this.constructedEvents)
                 .flat()
-                .filter(event => {
+                .filter((event) => {
                     let cellDate = new Date(this.cellData.value);
                     let eventStarts = new Date(event.start.value);
                     let eventEnds = new Date(event.end.value);
@@ -91,7 +90,7 @@ export default {
         hasPopups() {
             return (
                 this.selected &&
-                !!this.cell_events.find(ev => ev.status === 'popup-initiated')
+                !!this.cell_events.find((ev) => ev.status === 'popup-initiated')
             );
         },
     },
@@ -103,11 +102,8 @@ export default {
                 this.mouseUp();
                 return;
             }
-            let {
-                read_only,
-                overlap,
-                past_event_creation,
-            } = this.kalendar_options;
+            let { read_only, overlap, past_event_creation } =
+                this.kalendar_options;
             if (read_only) return;
 
             // if past_event_creation is set to false, check if cell value is
@@ -148,11 +144,8 @@ export default {
             let { read_only, overlap } = this.kalendar_options;
             if (read_only) return;
             if (this.creator && !this.creator.creating) return;
-            let {
-                starting_cell,
-                original_starting_cell,
-                creating,
-            } = this.creator;
+            let { starting_cell, original_starting_cell, creating } =
+                this.creator;
 
             // direction of scroll
             let going_down =
@@ -179,10 +172,10 @@ export default {
             this.$emit('reset');
         },
         isAnHour(index) {
-            if(this.kalendar_options.hourlySelection) {
-                return true
+            if (this.kalendar_options.hourlySelection) {
+                return true;
             } else {
-                return (index + 1) % (60 / 10) === 0
+                return (index + 1) % (60 / 10) === 0;
             }
         },
     },
