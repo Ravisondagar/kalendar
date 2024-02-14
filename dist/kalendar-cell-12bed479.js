@@ -1,4 +1,4 @@
-import { g as getLocaleTime, c as cloneObject, b as _objectSpread2, d as __vue_normalize__, e as __vue_create_injector__ } from './index-2862990c.js';
+import { g as getLocaleTime, c as cloneObject, b as _objectSpread2, d as __vue_normalize__, e as __vue_create_injector__ } from './index-3a4d0046.js';
 import 'vue';
 
 var script = {
@@ -6,7 +6,7 @@ var script = {
   inject: ['kalendar_options'],
   components: {
     KalendarEvent: function KalendarEvent() {
-      return import('./kalendar-event-70879be6.js');
+      return import('./kalendar-event-d1bae20c.js');
     }
   },
   computed: {
@@ -174,7 +174,6 @@ var __vue_render__ = function __vue_render__() {
   }, [_vm.cell_events && _vm.cell_events.length ? _vm._l(_vm.cell_events, function (event, eventIndex) {
     return _c('KalendarEvent', {
       key: eventIndex,
-      style: "z-index: 10",
       attrs: {
         "event": event,
         "total": _vm.cell_events.length,
@@ -189,14 +188,14 @@ var __vue_staticRenderFns__ = [];
 /* style */
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-0b2803e2_0", {
-    source: "li[data-v-0b2803e2]{font-size:13px;position:relative}.created-events[data-v-0b2803e2]{height:100%}ul.building-blocks li[data-v-0b2803e2]{z-index:0;border-bottom:dotted 1px var(--odd-cell-border-color)}ul.building-blocks li.first_of_appointment[data-v-0b2803e2]{z-index:1;opacity:1}ul.building-blocks li.is-an-hour[data-v-0b2803e2]{border-bottom:solid 1px var(--table-cell-border-color)}ul.building-blocks li.has-events[data-v-0b2803e2]{z-index:unset}ul.building-blocks li.being-created[data-v-0b2803e2]{z-index:11}",
+  inject("data-v-9619ddc6_0", {
+    source: "li[data-v-9619ddc6]{font-size:13px;position:relative}.created-events[data-v-9619ddc6]{height:100%}ul.building-blocks li[data-v-9619ddc6]{z-index:0;border-bottom:dotted 1px var(--odd-cell-border-color)}ul.building-blocks li.first_of_appointment[data-v-9619ddc6]{z-index:1;opacity:1}ul.building-blocks li.is-an-hour[data-v-9619ddc6]{border-bottom:solid 1px var(--table-cell-border-color)}ul.building-blocks li.has-events[data-v-9619ddc6]{z-index:unset}ul.building-blocks li.being-created[data-v-9619ddc6]{z-index:11}",
     map: undefined,
     media: undefined
   });
 };
 /* scoped */
-var __vue_scope_id__ = "data-v-0b2803e2";
+var __vue_scope_id__ = "data-v-9619ddc6";
 /* module identifier */
 var __vue_module_identifier__ = undefined;
 /* functional template */

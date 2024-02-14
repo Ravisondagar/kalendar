@@ -16,8 +16,8 @@
     `"
     >
         <template v-if="cell_events && cell_events.length">
+            <!-- :style="`z-index: 10`" -->
             <KalendarEvent
-                :style="`z-index: 10`"
                 v-for="(event, eventIndex) in cell_events"
                 :event="event"
                 :key="eventIndex"

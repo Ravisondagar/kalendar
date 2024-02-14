@@ -1787,7 +1787,6 @@ var __vue_render__$3 = function __vue_render__() {
   }, [_vm.cell_events && _vm.cell_events.length ? _vm._l(_vm.cell_events, function (event, eventIndex) {
     return _c('KalendarEvent', {
       key: eventIndex,
-      style: "z-index: 10",
       attrs: {
         "event": event,
         "total": _vm.cell_events.length,
@@ -1802,14 +1801,14 @@ var __vue_staticRenderFns__$3 = [];
 /* style */
 var __vue_inject_styles__$3 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-0b2803e2_0", {
-    source: "li[data-v-0b2803e2]{font-size:13px;position:relative}.created-events[data-v-0b2803e2]{height:100%}ul.building-blocks li[data-v-0b2803e2]{z-index:0;border-bottom:dotted 1px var(--odd-cell-border-color)}ul.building-blocks li.first_of_appointment[data-v-0b2803e2]{z-index:1;opacity:1}ul.building-blocks li.is-an-hour[data-v-0b2803e2]{border-bottom:solid 1px var(--table-cell-border-color)}ul.building-blocks li.has-events[data-v-0b2803e2]{z-index:unset}ul.building-blocks li.being-created[data-v-0b2803e2]{z-index:11}",
+  inject("data-v-9619ddc6_0", {
+    source: "li[data-v-9619ddc6]{font-size:13px;position:relative}.created-events[data-v-9619ddc6]{height:100%}ul.building-blocks li[data-v-9619ddc6]{z-index:0;border-bottom:dotted 1px var(--odd-cell-border-color)}ul.building-blocks li.first_of_appointment[data-v-9619ddc6]{z-index:1;opacity:1}ul.building-blocks li.is-an-hour[data-v-9619ddc6]{border-bottom:solid 1px var(--table-cell-border-color)}ul.building-blocks li.has-events[data-v-9619ddc6]{z-index:unset}ul.building-blocks li.being-created[data-v-9619ddc6]{z-index:11}",
     map: undefined,
     media: undefined
   });
 };
 /* scoped */
-var __vue_scope_id__$3 = "data-v-0b2803e2";
+var __vue_scope_id__$3 = "data-v-9619ddc6";
 /* module identifier */
 var __vue_module_identifier__$3 = undefined;
 /* functional template */
