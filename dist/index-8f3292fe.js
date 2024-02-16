@@ -127,7 +127,7 @@ var getHourlessDate = function getHourlessDate(date_string) {
 var getDatelessHour = function getDatelessHour(date_string, military) {
   var time = addTimezoneInfo(date_string);
   if (military) return getLocaleTime(time).slice(11, 16);
-  return formatAMPM(new Date(getLocaleTime(time)));
+  return formatAMPM(new Date(getLocaleTime(time, true)));
 };
 var getTime = function getTime(date) {
   var dateObj = new Date(date);
@@ -165,10 +165,14 @@ var cloneObject = function cloneObject(object) {
   return JSON.parse(JSON.stringify(object));
 };
 var getLocaleTime = function getLocaleTime(dateString) {
+  var abc = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   var _Date$toLocaleString$ = new Date(dateString).toLocaleString('en-GB').split(', '),
     _Date$toLocaleString$2 = _slicedToArray(_Date$toLocaleString$, 2),
     date = _Date$toLocaleString$2[0],
     hour = _Date$toLocaleString$2[1];
+  if (abc) {
+    return dateString;
+  }
   date = date.split('/').reverse().join('-');
   return "".concat(date, "T").concat(hour, ".000Z");
 };
@@ -192,6 +196,7 @@ var isWeekend = function isWeekend(date) {
   return day === 6 || day === 0;
 };
 var formatAMPM = function formatAMPM(date) {
+  // console.log(date);
   var hours = date.getUTCHours();
   var result = "".concat(hours % 12 === 0 ? 12 : hours % 12, " ").concat(hours >= 12 ? 'PM' : 'AM');
   return result;
@@ -200,7 +205,7 @@ var formatAMPM = function formatAMPM(date) {
 var script = {
   components: {
     KalendarWeekView: function KalendarWeekView() {
-      return import('./kalendar-weekview-b9e94fec.js');
+      return import('./kalendar-weekview-a1781c8c.js');
     }
   },
   props: {
