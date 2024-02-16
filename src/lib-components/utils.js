@@ -20,7 +20,7 @@ const getHourlessDate = (date_string) => {
 const getDatelessHour = (date_string, military) => {
     let time = addTimezoneInfo(date_string);
     if (military) return getLocaleTime(time).slice(11, 16);
-    return formatAMPM(new Date(getLocaleTime(time)));
+    return formatAMPM(new Date(getLocaleTime(time, true)));
 };
 
 const getYearMonthDay = (date_string) => {
@@ -115,8 +115,11 @@ const getDayDateID = (date) => {
     return `${year}-${month}-${day}`;
 };
 
-const getLocaleTime = (dateString) => {
+const getLocaleTime = (dateString, abc = false) => {
     let [date, hour] = new Date(dateString).toLocaleString('en-GB').split(', ');
+    if (abc) {
+        return dateString;
+    }
     date = date.split('/').reverse().join('-');
     return `${date}T${hour}.000Z`;
 };
@@ -145,6 +148,7 @@ const isWeekend = (date) => {
 };
 
 const formatAMPM = (date) => {
+    // console.log(date);
     let hours = date.getUTCHours();
     let result = `${hours % 12 === 0 ? 12 : hours % 12} ${
         hours >= 12 ? 'PM' : 'AM'
